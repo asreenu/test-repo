@@ -2,10 +2,16 @@
 
 Daily search for **high-memory Mac Studio** listings (128 GB+) across reputable and acceptable sellers. Built to run on your local Mac and schedule via `launchd`.
 
+## Location
+
+```
+aicode/scripts/mac-studio-finder/
+```
+
 ## Quick start (local Mac)
 
 ```bash
-cd mac-studio-finder
+cd aicode/scripts/mac-studio-finder
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
