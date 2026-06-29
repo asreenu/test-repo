@@ -1,0 +1,80 @@
+# Default config — copy from config.example.yaml to customize.
+
+search:
+  min_memory_gb: 128
+  max_price_usd: 5500
+  chip_keywords:
+    - m2 ultra
+    - m3 ultra
+    - m4 max
+    - m1 ultra
+  exclude_title_keywords:
+    - studio display
+    - box only
+    - parts
+    - logic board
+
+notifications:
+  macos: true
+  notify_only_new: true
+
+output:
+  data_dir: ~/.mac-studio-finder
+  log_file: ~/.mac-studio-finder/search.log
+  results_file: ~/.mac-studio-finder/latest_results.json
+
+request:
+  timeout_seconds: 30
+  delay_between_sources_seconds: 1.5
+
+sources:
+  apple_refurb:
+    enabled: true
+    tier: reputable
+    url: https://www.apple.com/shop/refurbished/mac/mac-desktops
+
+  refurb_me:
+    enabled: true
+    tier: reputable
+    url: https://www.refurb.me/refurbished/mac-studio
+
+  techable:
+    enabled: true
+    tier: reputable
+    shopify_products_url: https://techable.com/products.json
+
+  hoxton_macs:
+    enabled: false
+    tier: reputable
+    shopify_products_url: https://www.hoxtonmacs.co.uk/collections/refurbished-mac-studio/products.json
+    currency: GBP
+
+  ipowerresale:
+    enabled: true
+    tier: reputable
+    shopify_products_url: https://ipowerresale.com/collections/mac-studio/products.json
+
+  mac_of_all_trades:
+    enabled: true
+    tier: reputable
+    search_url: https://www.macofalltrades.com/search.php?search_query=mac+studio
+
+  back_market:
+    enabled: true
+    tier: acceptable
+    search_url: https://www.backmarket.com/en-us/search?q=mac+studio+128gb
+
+  swappa:
+    enabled: true
+    tier: acceptable
+    url: https://swappa.com/listings/mac-studio
+
+  adorama_used:
+    enabled: true
+    tier: acceptable
+    search_url: https://www.adorama.com/l/Computers/Used?searchinfo=mac+studio+128gb
+
+  ebay:
+    enabled: true
+    tier: acceptable
+    search_url: https://www.ebay.com/sch/i.html?_nkw=mac+studio+128gb+m2+ultra&_sacat=179&LH_BIN=1&_sop=10
